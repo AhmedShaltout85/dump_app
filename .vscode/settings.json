@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true,
+                "tdsVersion": "7_1"
+            },
+            "previewLimit": 50,
+            "server": "192.168.0.212",
+            "port": 1433,
+            "driver": "MSSQL",
+            "name": "labs",
+            "database": "awco_labs",
+            "username": "awco"
+        }
+    ]
+}
