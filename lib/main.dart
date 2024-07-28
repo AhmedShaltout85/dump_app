@@ -52,9 +52,11 @@ class MyApp extends StatelessWidget {
       ),
     );
     return MaterialApp(
+      //define the default language
+      locale: LocaleListItems.localItems.first,
       debugShowCheckedModeBanner: false,
       theme: AppTheme.setTheme(),
-      title: "DumpApp",
+      title: "Mobile Store",
       home: const SafeArea(
         child: LandingScreen(),
       ),
@@ -63,6 +65,7 @@ class MyApp extends StatelessWidget {
         AppLocale.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate
       ],
       localeResolutionCallback: (currentLang, supportLang) {
         if (currentLang != null) {

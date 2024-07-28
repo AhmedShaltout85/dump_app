@@ -10,16 +10,18 @@ import '../../screens/order_screen.dart';
 import '../../screens/profile_screen.dart';
 import '../../screens/settings_screen.dart';
 import '../common_widget/custom_circle_avatar.dart';
+import '../common_widget/custom_drawer_listtile_element.dart';
 
 class CustomizDrawer extends StatelessWidget {
   const CustomizDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return 
+    // final localeChangeProv = Provider.of<LocaleListItems>(context);
 
-     Drawer(
+    return Drawer(
       child: ListView(
+        controller: ScrollController(),
         children: <Widget>[
           Container(
             decoration: const BoxDecoration(
@@ -60,85 +62,53 @@ class CustomizDrawer extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(top: 17.0),
           ),
-          ListTile(
-            leading: const Icon(
-              Icons.home,
-              color: AppTheme.primColor,
-            ),
-            trailing: const Icon(
-              Icons.arrow_forward_ios,
-              color: AppTheme.primColor,
-            ),
-            title: Text(
-              "${AppLocale.of(context).getTranslated("home_page")}",
-              style: const TextStyle(color: AppTheme.primTextColor),
-            ),
+          CustomDrawerListTileElement(
+            title: "${AppLocale.of(context).getTranslated("home_page")}",
+            iconLeading: Icons.home,
+            iconTrailing: Icons.arrow_forward_ios,
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) => const HomeScreen()));
             },
           ),
+          
           const Divider(
             height: 1,
             thickness: 0.5,
           ),
-          ListTile(
-            leading: const Icon(
-              Icons.person,
-              color: AppTheme.primColor,
-            ),
-            trailing: const Icon(
-              Icons.arrow_forward_ios,
-              color: AppTheme.primColor,
-            ),
-            title: Text(
-              "${AppLocale.of(context).getTranslated("user_profile_page")}",
-              style: const TextStyle(color: AppTheme.primTextColor),
-            ),
+          CustomDrawerListTileElement(
+            title:
+                "${AppLocale.of(context).getTranslated("user_profile_page")}",
+            iconLeading: Icons.person,
+            iconTrailing: Icons.arrow_forward_ios,
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) => const UserProfile()));
             },
           ),
+          
           const Divider(
             height: 1,
             thickness: 0.5,
           ),
-          ListTile(
-            leading: const Icon(
-              Icons.favorite_outlined,
-              color: AppTheme.primColor,
-            ),
-            trailing: const Icon(
-              Icons.arrow_forward_ios,
-              color: AppTheme.primColor,
-            ),
-            title: Text(
-              "${AppLocale.of(context).getTranslated("favorite_page")}",
-              style: const TextStyle(color: AppTheme.primTextColor),
-            ),
+          CustomDrawerListTileElement(
+            title: "${AppLocale.of(context).getTranslated("favorite_page")}",
+            iconLeading: Icons.favorite_outlined,
+            iconTrailing: Icons.arrow_forward_ios,
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) => const FavoriteScreen()));
             },
           ),
+          
           const Divider(
             height: 1,
             thickness: 0.5,
           ),
-          ListTile(
-            leading: const Icon(
-              Icons.shopping_cart,
-              color: AppTheme.primColor,
-            ),
-            trailing: const Icon(
-              Icons.arrow_forward_ios,
-              color: AppTheme.primColor,
-            ),
-            title: Text(
-              "${AppLocale.of(context).getTranslated("cart_page")}",
-              style: const TextStyle(color: AppTheme.primTextColor),
-            ),
+          CustomDrawerListTileElement(
+            title: "${AppLocale.of(context).getTranslated("cart_page")}",
+            iconLeading: Icons.shopping_cart,
+            iconTrailing: Icons.arrow_forward_ios,
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) => const CartScreen()));
@@ -148,85 +118,61 @@ class CustomizDrawer extends StatelessWidget {
             height: 1,
             thickness: 0.5,
           ),
-          ListTile(
-            leading: const Icon(
-              Icons.card_travel,
-              color: AppTheme.primColor,
-            ),
-            trailing: const Icon(
-              Icons.arrow_forward_ios,
-              color: AppTheme.primColor,
-            ),
-            title: Text(
-              "${AppLocale.of(context).getTranslated("order_page_title")}",
-              style: const TextStyle(color: AppTheme.primTextColor),
-            ),
+          CustomDrawerListTileElement(
+            title: "${AppLocale.of(context).getTranslated("order_page_title")}",
+            iconLeading: Icons.card_travel,
+            iconTrailing: Icons.arrow_forward_ios,
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) => const OrderScreen()));
             },
           ),
+          
           const Divider(
             height: 1,
             thickness: 0.5,
           ),
-          ListTile(
-            leading: const Icon(
-              Icons.settings,
-              color: AppTheme.primColor,
-            ),
-            trailing: const Icon(
-              Icons.arrow_forward_ios,
-              color: AppTheme.primColor,
-            ),
-            title: Text(
-              "${AppLocale.of(context).getTranslated("setting")}",
-              style: const TextStyle(color: AppTheme.primTextColor),
-            ),
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (_) => const SettingsScreen()));
-            },
-          ),
+          CustomDrawerListTileElement(
+              title: "${AppLocale.of(context).getTranslated("setting")}",
+              iconLeading: Icons.settings,
+              iconTrailing: Icons.arrow_forward_ios,
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const SettingsScreen()));
+              }),
+          
           const Divider(
             height: 1,
             thickness: 0.5,
           ),
-          ListTile(
-            leading: const Icon(
-              Icons.account_box_outlined,
-              color: AppTheme.primColor,
-            ),
-            trailing: const Icon(
-              Icons.arrow_forward_ios,
-              color: AppTheme.primColor,
-            ),
-            title: Text(
-              "${AppLocale.of(context).getTranslated("about_us")}",
-              style: const TextStyle(color: AppTheme.primTextColor),
-            ),
+          CustomDrawerListTileElement(
+              title: "${AppLocale.of(context).getTranslated("language")}",
+              iconLeading: Icons.language_outlined,
+              iconTrailing: Icons.arrow_forward_ios,
+              onTap: () {}),
+         
+          const Divider(
+            height: 1,
+            thickness: 0.5,
+          ),
+          CustomDrawerListTileElement(
+            title: "${AppLocale.of(context).getTranslated("about_us")}",
+            iconLeading: Icons.account_box_outlined,
+            iconTrailing: Icons.arrow_forward_ios,
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) => const AboutUsScreen()));
             },
           ),
+          
           const Divider(
             height: 1,
             thickness: 0.5,
           ),
-          ListTile(
-            leading: const Icon(
-              Icons.logout,
-              color: AppTheme.primColor,
-            ),
-            trailing: const Icon(
-              Icons.arrow_forward_ios,
-              color: AppTheme.primColor,
-            ),
-            title: Text(
-              "${AppLocale.of(context).getTranslated("log_out")}",
-              style: const TextStyle(color: AppTheme.primTextColor),
-            ),
+          CustomDrawerListTileElement(
+            title: "${AppLocale.of(context).getTranslated("log_out")}",
+            iconLeading: Icons.logout,
+            iconTrailing: Icons.arrow_forward_ios,
             onTap: () {
               Navigator.of(context).pop();
             },
