@@ -1,0 +1,10 @@
+/home/ahmedshaltout/Desktop/androidApp/PrivateProjects/dump_app/android/build/linux/x64/debug/bundle/android
+/home/ahmedshaltout/Desktop/androidApp/PrivateProjects/dump_app/android/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/ahmedshaltout/Desktop/androidApp/PrivateProjects/dump_app/android/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/ahmedshaltout/Desktop/androidApp/PrivateProjects/dump_app/android/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/ahmedshaltout/Desktop/androidApp/PrivateProjects/dump_app/android/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/ahmedshaltout/Desktop/androidApp/PrivateProjects/dump_app/android/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/ahmedshaltout/Desktop/androidApp/PrivateProjects/dump_app/android/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/ahmedshaltout/Desktop/androidApp/PrivateProjects/dump_app/android/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/ahmedshaltout/Desktop/androidApp/PrivateProjects/dump_app/android/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/ahmedshaltout/Desktop/androidApp/PrivateProjects/dump_app/android/build/linux/x64/debug/bundle/data/flutter_assets/version.json
